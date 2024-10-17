@@ -1,0 +1,196 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, hsla(208, 7%, 55%, 1) 0%, hsla(191, 5%, 40%, 1) 100%);
+    font-family: "Roboto", sans-serif;
+}
+
+.heading h1 {
+    font-size: 100px;
+    font-weight: 300;
+    text-align: center;
+    color: #1c324d;
+    text-decoration: underline;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.inpbox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    gap: 4px;
+}
+
+.inpbox #grouptask {
+    width: 10%;
+    height: 30px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    color: white;
+    background-color: #1c324d;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.inpbox #task {
+    width: 50%;
+    height: 30px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .inpbox {
+        flex-direction: column; /* Change to column direction */
+        align-items: center; /* Stretch the items to full width */
+    }
+
+    .inpbox #grouptask,
+    .inpbox #task {
+        width: 100%; /* Set to full width on mobile */
+    }
+
+    .inpbox #grouptask {
+        border-radius: 15px;
+
+    }
+
+    .inpbox #task {
+        border-radius: 15px;
+        margin-top: 4px; /* Add some space between input fields */
+    }
+}
+
+
+#addtask {
+    margin-top: 30px;
+    padding: 10px 25px;
+    border-radius: 10px;
+    font-size: larger;
+    color: white;
+    background-color: #1c324d;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+#addtask:hover {
+    background-color: #364f6b;
+    transform: scale(1.05);
+}
+
+/* Taskcards section */
+.taskcards {
+    margin-top: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 30px; /* Space between the cards */
+    padding: 0 20px;
+}
+
+.card {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Align text to the left */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.task-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.task-number {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.task-content {
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+.task-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.task-actions .task-date {
+    font-size: 12px;
+    color: #888;
+    margin-right: 10px;
+}
+
+.task-actions a {
+    font-size: 14px;
+    color: #1c324d;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.task-actions a:hover {
+    color: #364f6b;
+}
+
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsiveness for tablets and smaller screens */
+@media (max-width: 992px) {
+    .taskcards {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .taskcards {
+        grid-template-columns: 1fr; /* 1 column for small screens */
+    }
+
+    .heading h1 {
+        font-size: 50px;
+    }
+
+    .inpbox #grouptask,
+    .inpbox #task {
+        width: 80%;
+    }
+}
