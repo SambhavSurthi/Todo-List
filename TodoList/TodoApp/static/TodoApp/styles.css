@@ -157,19 +157,6 @@ body {
     color: #e63946;
 }
 
-/* Due Tasks section */
-.due-tasks-section {
-    margin-top: 30px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 20px;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    animation: fadeInUp 1s ease-in-out;
-}
-
 .due-tasks-section h2 {
     text-align: center;
     color: #e63946;
@@ -298,11 +285,14 @@ body {
     .inpbox {
         flex-direction: column;
         align-items: center;
+        margin-left: 5px;
+        margin-right: 5px;
     }
 
     .inpbox #grouptask, .inpbox #task, .inpbox #due_date {
         width: 100%;
         margin-top: 5px;
+
     }
 }
 
@@ -385,6 +375,7 @@ body {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom:50px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     animation: fadeInUp 1s ease-in-out;
 }
