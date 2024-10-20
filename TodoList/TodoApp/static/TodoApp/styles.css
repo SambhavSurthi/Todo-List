@@ -2,8 +2,14 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background: linear-gradient(90deg, hsla(208, 7%, 55%, 1) 0%, hsla(191, 5%, 40%, 1) 100%);
+
     font-family: "Roboto", sans-serif;
+
+    background: #DAE2F8;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #D6A4A4, #DAE2F8);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #D6A4A4, #DAE2F8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
 }
 
 .heading h1 {
@@ -20,11 +26,10 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 30px;
 }
 
 .inpbox {
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
